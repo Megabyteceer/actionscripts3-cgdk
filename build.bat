@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\FlashDevelop\Tools\fdbuild\fdbuild.exe" "D:\Dropbox\as3-cgdk\actionscripts3-cgdk\As3-cgdk.as3proj" -ipc 29ddc5d1-babd-4424-a32c-7fbe60f135fa -version "3.9.0" -compiler "C:\Program Files (x86)\FlashDevelop\Tools\air3.9" -library "C:\Program Files (x86)\FlashDevelop\Library"
