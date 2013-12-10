@@ -1,7 +1,10 @@
 package  
 {
+	import flash.desktop.NativeApplication;
 	import flash.display.Stage;
 	import flash.events.Event;
+	import flash.events.IOErrorEvent;
+	import flash.events.SecurityErrorEvent;
 	import flash.events.TimerEvent;
 	import flash.net.Socket;
 	import flash.utils.ByteArray;
@@ -24,6 +27,9 @@ public class StructSocket extends flash.net.Socket
 	public function StructSocket(host:String, port:int, stage:Stage)
 	{
 		super(host, port);
+		addEventListener(IOErrorEvent.IO_ERROR, onError);
+		addEventListener(SecurityErrorEvent.SECURITY_ERROR, onError);
+		
 		stage.addEventListener(Event.ENTER_FRAME, process);
 	}
 	
@@ -33,6 +39,10 @@ public class StructSocket extends flash.net.Socket
 		request.push(callback);
 	}
 	
+	private function onError(e:Event):void
+	{
+		NativeApplication.nativeApplication.exit();
+	}
 
 	
 	public function process(e:Event):void

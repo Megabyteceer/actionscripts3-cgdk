@@ -4,7 +4,7 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\As3cgdk.swf" />
+    <movie path="_bin\As3cgdk.swf" />
     <movie fps="60" />
     <movie width="300" />
     <movie height="200" />
