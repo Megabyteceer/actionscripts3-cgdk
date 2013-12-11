@@ -1,19 +1,25 @@
-package 
+package com.codegame.codetroopers2013.devkit.as3cgdk
 {
 	import adobe.utils.CustomActions;
+CONFIG::air
+{
 	import flash.desktop.NativeApplication;
 	import flash.display.NativeWindow;
+}
 	import flash.display.Sprite;
 	import flash.display.Stage;
 	import flash.events.Event;
 	import flash.events.GameInputEvent;
+CONFIG::air
+{
 	import flash.events.InvokeEvent;
+}
 	import flash.system.Worker;
 	import flash.utils.ByteArray;
-	import model.Game;
-	import model.Move;
-	import model.PlayerContext;
-	import model.Trooper;
+	import com.codegame.codetroopers2013.devkit.as3cgdk.model.Game;
+	import com.codegame.codetroopers2013.devkit.as3cgdk.model.Move;
+	import com.codegame.codetroopers2013.devkit.as3cgdk.model.PlayerContext;
+	import com.codegame.codetroopers2013.devkit.as3cgdk.model.Trooper;
 	
 	/**
 	 * ...
@@ -32,17 +38,22 @@ package
 		
 		public function Runner() 
 		{
-			
-			NativeApplication.nativeApplication.addEventListener(InvokeEvent.INVOKE, invokeHandler);
+				CONFIG::air
+				{
+						NativeApplication.nativeApplication.addEventListener(InvokeEvent.INVOKE, invokeHandler);
+						return;
+				}
+				
+				invokeHandler(null);
 		}
-		
-		private function invokeHandler(event:InvokeEvent):void
+
+		private function invokeHandler(event:*):void
 		{
 			try
 			{
-				if (event.arguments[3])
+				if (event && event["arguments"][3])
 				{
-					run(event.arguments);
+					run(event["arguments"]);
 				}
 				else
 				{
@@ -55,7 +66,10 @@ package
 			}
 			catch (e:Error)
 			{
-				NativeApplication.nativeApplication.exit();
+				CONFIG::air
+				{
+					NativeApplication.nativeApplication.exit();
+				}
 			}
 		}
 		

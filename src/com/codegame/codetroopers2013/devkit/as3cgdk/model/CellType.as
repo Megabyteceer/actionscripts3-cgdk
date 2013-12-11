@@ -1,4 +1,4 @@
-package model 
+package com.codegame.codetroopers2013.devkit.as3cgdk.model 
 {
 	/**
 	 * ...

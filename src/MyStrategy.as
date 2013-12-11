@@ -1,21 +1,24 @@
 package 
 {
+	import com.codegame.codetroopers2013.devkit.as3cgdk.IStrategy;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.GameInputEvent;
 	import flash.system.Worker;
-	import model.ActionType;
-	import model.Direction;
-	import model.Game;
-	import model.Move;
-	import model.Trooper;
-	import model.World;
+	import com.codegame.codetroopers2013.devkit.as3cgdk.model.ActionType;
+	import com.codegame.codetroopers2013.devkit.as3cgdk.model.Direction;
+	import com.codegame.codetroopers2013.devkit.as3cgdk.model.Game;
+	import com.codegame.codetroopers2013.devkit.as3cgdk.model.Move;
+	import com.codegame.codetroopers2013.devkit.as3cgdk.model.Trooper;
+	import com.codegame.codetroopers2013.devkit.as3cgdk.model.World;
+	
+
 	
 	/**
 	 * ...
 	 * @author 
 	 */
-	public class MyStrategy implements IStrategy 
+	public class MyStrategy implements IStrategy
 	{
 		
 		public function MyStrategy()

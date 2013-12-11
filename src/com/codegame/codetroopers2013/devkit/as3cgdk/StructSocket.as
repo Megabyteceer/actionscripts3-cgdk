@@ -1,6 +1,9 @@
-package  
+package  com.codegame.codetroopers2013.devkit.as3cgdk
 {
+	CONFIG::air
+				{
 	import flash.desktop.NativeApplication;
+				}
 	import flash.display.Stage;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
@@ -41,7 +44,10 @@ public class StructSocket extends flash.net.Socket
 	
 	private function onError(e:Event):void
 	{
+		CONFIG::air
+				{
 		NativeApplication.nativeApplication.exit();
+				}
 	}
 
 	
